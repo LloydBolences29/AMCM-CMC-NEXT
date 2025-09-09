@@ -10,7 +10,7 @@ export default function Home() {
         <p className={styles.subtitle}>Your content management system</p>
         <div className={styles.homepageButton}>
           <Link href="/login" className={styles.loginButton}>
-            <button className={styles.getStartedButton}>Get Start Now</button>
+            <button className={styles.getStartedButton}>Get Started Now</button>
           </Link>
         </div>
       </div>

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    z-index: 2;
 }
 .login-form{
     display: flex;
@@ -29,15 +30,20 @@
     margin-top: 10px;
 }
 .login-btn{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #00a896; /* A vibrant teal for the button */
+  color: #ffffff;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px; /* Pill-shaped button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 168, 150, 0.2);
 }
 .login-btn:hover{
-    background-color: #0056b3;
+  background-color: #00c2ad;
+  transform: translateY(-2px); /* Slight lift on hover */
 }
 

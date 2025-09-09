@@ -19,7 +19,7 @@ const LoginForm = () =>{
         setPassword(e.target.value);
     }
     return (
-        <>
+        
         <div className={styles["login-container"]}>
       <div className={styles["login-form"]}>
         <div className={styles["login-title"]}>
@@ -40,7 +40,7 @@ const LoginForm = () =>{
         </form>
       </div>
     </div>
-    </>
+    
     )
 }
 
