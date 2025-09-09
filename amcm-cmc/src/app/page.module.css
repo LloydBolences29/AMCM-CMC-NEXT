@@ -1,0 +1,82 @@
+/* --- Main Container --- */
+/* This sets up the full-screen container with the dark background */
+.homepageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #feffff; /* Dark, deep teal background */
+  color: #0d2c3a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- The Fading Squares Background Effect --- */
+/* This pseudo-element creates the signature background from your ID card */
+.homepageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  
+  /* Creates the subtle grid pattern */
+  background-image: 
+    linear-gradient(to right, #007F98 1px, transparent 1px),
+    linear-gradient(to bottom, #007F98 1px, transparent 1px);
+  background-size: 15px 15px;
+
+  /* Creates the fade effect, centered on the left */
+  mask-image: radial-gradient(circle at center, transparent 70%, rgba(0,0,0,-0.3) 50%, rgba(0,0,0,0.5) 90%, black 80%);
+  -webkit-mask-image: radial-gradient(circle at center, transparent 70%, rgba(0,0,0,-0.3) 50%, rgba(0,0,0,0.5) 90%, black 80%);
+}
+
+/* --- Content Wrapper --- */
+/* This holds your text and button, ensuring it appears above the background effect */
+.homepageWrapper {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* --- Typography --- */
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #b0e0e6; /* A lighter, powder blue for the subtitle */
+  margin-bottom: 2rem;
+}
+
+/* --- Button Styles --- */
+/* This styles the <Link> component to look like a button */
+.getStartedButton {
+  display: inline-block;
+  background-color: #00a896; /* A vibrant teal for the button */
+  color: #ffffff;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px; /* Pill-shaped button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 168, 150, 0.2);
+}
+
+.getStartedButton:hover {
+  background-color: #00c2ad;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
